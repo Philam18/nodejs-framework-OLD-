@@ -1,0 +1,41 @@
+"use strict";
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ENVIRONMENT
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const Config           = require('./config/config.js');
+const ROUTES           = require('./config/routes.json');
+const TemplateRenderer = require('./lib/TemplateRenderer.js');
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ROUTER
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const express = require('express')
+const app     = express();
+const port    = Config.getPort();
+
+
+for (let i = 0; i < ROUTES.routes.length; i++)
+{
+    let route = ROUTES.routes[i];
+    let 
+
+
+}
+
+app.get('/', (req, res) => res.send('Hello World!'))
+
+
+
+
+
+
+
+
+
+
+app.listen(port, function(){
+    console.log("====================================");
+    console.log("Listening on port " + port "...");
+    console.log("====================================");
+});
