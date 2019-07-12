@@ -2,7 +2,8 @@
     "routes" : 
     [
         {
-            "template" : "index.html",
+            "path"    : "/",
+            "template": "index.ejs"
         }
     ]
 }
