@@ -1,11 +1,11 @@
 import { Environment } from "../lib/Environment";
 
-export namespace Config
+export class Config
 {
-    export const DEFAULT_ENVIRONMENT : Environment = Environment.LOCAL;
-    export const DEFAULT_PORT : string             = "8080";
+    private static readonly DEFAULT_ENVIRONMENT : Environment = Environment.LOCAL;
+    private static readonly DEFAULT_PORT : string             = "8080";
     
-    export function getEnvironment() : Environment
+    public static getEnvironment() : Environment
     {
         if (process.env.FRAMEWORK_ENVIRONMENT !== undefined)
         {
@@ -19,16 +19,15 @@ export namespace Config
                     return Environment.PROD;
             }
         }
-        return DEFAULT_ENVIRONMENT;
+        return Config.DEFAULT_ENVIRONMENT;
     }
 
-    export function  getPort() : String
+    public static getPort() : String
     {
-        let port = DEFAULT_PORT;
         if (process.env.PORT !== undefined) {
-            port = process.env.PORT.toString();
+            return process.env.PORT.toString();
         }
-        return port;
+        return Config.DEFAULT_PORT;
     }
 
 
