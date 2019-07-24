@@ -1,13 +1,18 @@
-import { RouteConfiguration } from "./RouteConfiguration";
 import { Request } from "./Request";
+import { IRoute } from "./IRoute";
 
 export class Controller
 {
-
+    ////////////////////////////////////////////////////////////
+    // 
+    ////////////////////////////////////////////////////////////
     private readonly request : Request;
-    private readonly config : RouteConfiguration;
+    private readonly config : IRoute;
     
-    constructor(config : RouteConfiguration, request : Request)
+    ////////////////////////////////////////////////////////////
+    // 
+    ////////////////////////////////////////////////////////////
+    public constructor(config : IRoute, request : Request)
     {
         this.request = request;
         this.config = config;

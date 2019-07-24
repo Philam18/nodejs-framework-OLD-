@@ -22,7 +22,7 @@ export class Config
         return Config.DEFAULT_ENVIRONMENT;
     }
 
-    public static getPort() : String
+    public static getPort() : string
     {
         if (process.env.PORT !== undefined) {
             return process.env.PORT.toString();
