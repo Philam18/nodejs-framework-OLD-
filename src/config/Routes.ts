@@ -1,4 +1,5 @@
 import { IRoute } from '../lib/IRoute';
+import { HTTPMethod } from '../lib/http/HTTPMethod';
 
 ////////////////////////////////////////////////////////////
 // 
@@ -6,8 +7,16 @@ import { IRoute } from '../lib/IRoute';
 export const Routes : IRoute[] = 
 [
     {
-        "path" : "/"
+        "path" : "/",
+        "method" : HTTPMethod.GET
+    },
+
+    {
+        "path" : "/home",
+        "controller" : "MyController"
     }
+
+
 ];
 
 

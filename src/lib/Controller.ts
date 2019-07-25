@@ -6,18 +6,19 @@ export class Controller
     ////////////////////////////////////////////////////////////
     // 
     ////////////////////////////////////////////////////////////
-    private request : Request;
+    private request : any;
     private readonly config : IRoute;
     
     ////////////////////////////////////////////////////////////
     // 
     ////////////////////////////////////////////////////////////
-    public constructor(config : IRoute)
+    public constructor(config : IRoute, request : any)
     {
-        this.config = config;
+        this.config  = config;
+        this.request = request;
     }
 
-    public dispatch(request : Request)
+    public dispatch()
     {
         
     }
