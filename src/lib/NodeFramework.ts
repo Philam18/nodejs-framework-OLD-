@@ -54,9 +54,8 @@ export class NodeFramework
                     result.push(new_obj);
                 }
             }
-            
             return result;
-        })(Routes.getRoutes());
+        })(Routes);
 
         if (routes.length === 0) {
             throw new Error("No routes defined");
@@ -69,10 +68,12 @@ export class NodeFramework
                 controller = route_config.controller;
             }
 
-            let method;
             if (route_config.method  !== undefined) {
                 
             }
+
+            
+
         }
 
         // let port = Config.getPort();
